@@ -186,7 +186,7 @@ font-size: 25px;
                                 @auth
                                 <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Halo, {{ auth()->user()->name }}
+                                    Halo {{ auth()->user()->name }}
                                   </a>
                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
@@ -209,7 +209,7 @@ font-size: 25px;
 </div>
       
 <div class="container py-5">
-      <div class="jumbotron text-white" style="background-image: url({{asset('img/desain.jpeg')}});>
+      <div class="jumbotron text-white" style="background-image: url({{asset('img/desain.jpeg')}})";>
         <h2 class="mb-4">
           Welcome To Website <br>Event BEM ONLINE TICKETING
         </h2>
