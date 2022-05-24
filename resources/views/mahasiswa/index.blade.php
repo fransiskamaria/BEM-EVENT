@@ -32,6 +32,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    
     <script src="{{  asset('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js') }} " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
@@ -73,61 +76,7 @@
   color: blue;
   border-color: #1977cc;
 }
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 20px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
- 
-  transition: 0.3s;
-}
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: none;
-  color: #082744;
-  border: none;
-}
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #1977cc;
-}
-.navbar .dropdown:hover > ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-.navbar .dropdown .dropdown:hover > ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-  .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
-  }
-}
+
 
 .container {
   /* background:#3297BB; */
@@ -146,10 +95,32 @@ font-size: 25px;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.container-2{
+  width:300px;
+  height:240px;
+  position:absolute;
+  left:67%;
+  top:80%;
+  margin-left:-150px; (300/2)
+  /* margin-top:-120px; */
+}
+.container-3{
+ 
+  height:240px;
+  position:absolute;
+
+  top:135%;
+} 
+p{
+  font-family: Comic Sans;
+  font-size: 20px;
+}
+h1{
+  font-family: Poppins;
+}
 
 </style>
 </head>
-
 <body>
 
 <div class="container-fluid mb-5">
@@ -186,7 +157,7 @@ font-size: 25px;
                                 @auth
                                 <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Halo {{ auth()->user()->name }}
+                                    Halo, {{ auth()->user()->name }}
                                   </a>
                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
@@ -209,7 +180,7 @@ font-size: 25px;
 </div>
       
 <div class="container py-5">
-      <div class="jumbotron text-white" style="background-image: url({{asset('img/desain.jpeg')}})";>
+      <div class="jumbotron text-white" style="background-image: url({{asset('img/desain.jpeg')}});>
         <h2 class="mb-4">
           Welcome To Website <br>Event BEM ONLINE TICKETING
         </h2>
@@ -219,7 +190,65 @@ font-size: 25px;
         
       </div>
     </div>
-    <div class="container-fluid pt-5">
+    <div class="desc">
+      <h1>Apa yah tujuan <br>diadakannya Event BEM di IT DEL?</h1>
+      <p>Tujuan diadakan nya event yang ada di IT DEL adalah untuk menjalin hubungan<br>
+       sesama mahasiswa dikampus kita Institut Teknologi Del. Melalui landasan yang <br>
+       selalu kita terapkan yaitu 3M MarTuhan, MarRoha, MarBisuk sehingga pentingnya <br>
+       bagi mahasiwa dikampus dan diasrama tetap menjalin hubungan yang erat dan tali <br>
+       persahabatan yang kuat dengan pertemanan yang kuat akan menjadikan relasi yang <br>
+       baik pula kedepannya. Baik hubungan yang erat antara senior maupun junior dikampus.<br>
+      Selain mempererat keakraban sesama mahasiswa event ini juga dapat meningkatkan bakat<br>
+      yang dimiliki oleh mahasiswa. Dan melatih kepercayaan diri mahasiswa untuk menampilkan<br>
+       bakat yang dimiliki didepan banyak orang.</p>
+</div>
+<div class="container-2">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" weight="400px" width="350px">
+      <div class="item active">
+        <img src="{{asset('img/fesbud.jpeg')}}" alt="Festival Budaya" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="{{asset('img/pentas.jpeg')}}" alt="Pentas Budaya" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="{{asset('img/podcast.png')}}" alt="Festival Budaya" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="{{asset('img/MUSIC CORNER.png')}}" alt="Music Corner" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="{{asset('img/KOPI SORE.png')}}" alt="Kopi Sore" style="width:100%;">
+      </div>
+    </div>
+    
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+<div class="container-3">
+<div class="container-fluid pt-5">
         <div class="row px-xl-1 pb-3">
             <div class="col-lg-2 col-md-6 col-sm-6 pb-1">
                 <div class="d-flex align-items-center" style="padding: 30px;">
@@ -253,5 +282,26 @@ font-size: 25px;
             </div>
         </div>
     </div>
-    
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+
+<footer class="bg-light text-center text-white">
+<!-- Grid container -->
+<div class="container p-4 pb-0">
+  <!-- Section: Social media -->
+  <section class="mb-4">
+
+  <!-- Section: Social media -->
+</div>
+<!-- Grid container -->
+
+<!-- Copyright -->
+<div class="text-center p-3" style="background-color: 	#1E90FF;">
+  © 2022 Copyright:
+  <a class="text-white" href="">BERKISA-2022</a>
+</div>
+<!-- Copyright -->
+</footer>
+</div>
+<!-- End of .container -->
 </body> 
